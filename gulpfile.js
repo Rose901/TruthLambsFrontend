@@ -99,8 +99,8 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-/*gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js', 'browserSync'], function() {
   gulp.watch('./src/*.scss', ['css']);
   gulp.watch('./src/*.js', ['js']);
   gulp.watch('./dist/*.html', browserSync.reload);
-});  */
+});
