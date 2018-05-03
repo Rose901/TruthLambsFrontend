@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var sourcemaps = require('gulp-sourcemaps');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
 
@@ -33,9 +34,11 @@ gulp.task('vendor', function() {
 // Compile SCSS
 gulp.task('css:compile', function() {
   return gulp.src('./src/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist'))
 });
 
@@ -59,8 +62,7 @@ gulp.task('css', ['css:compile', 'css:minify']);
 gulp.task('js:minify', function() {
   return gulp.src([
       './src/*.js',
-      '!./src/*.min.js',
-      '!./src/site.js'
+      '!./src/*.min.js'
     ])
     .pipe(uglify())
     .pipe(rename({
@@ -70,21 +72,20 @@ gulp.task('js:minify', function() {
     .pipe(browserSync.stream());
 });
 
-// Concatenate all javascript together
-// gulp.task('js:concat', function() {
-//   return gulp.src([
-//       './vendor/jquery/jquery.min.js',
-//       './vendor/bootstrap/js/bootstrap.bundle.min.js',
-//       './vendor/magnific-popup/jquery.magnific-popup.min.js',
-//       './js/contact_me.min.js',
-//       './js/freelancer.min.js',
-//     ])
-//     .pipe(concat('site.js'))
-//     .pipe(gulp.dest('./js/'))
-// });
+//Concatenate all javascript together
+gulp.task('js:concat', function() {
+  return gulp.src([
+      './vendor/jquery/jquery.min.js',
+      './src/site.js',
+    ])
+    .pipe(uglify())
+    .pipe(concat('site.min.js'))
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.stream());
+});
 
 // JS
-gulp.task('js', ['js:minify'/*, 'js:concat'*/]);
+gulp.task('js', ['js:concat'/*, 'js:concat'*/]);
 
 // Default task
 gulp.task('default', ['css', 'js', 'vendor']);

@@ -28,10 +28,12 @@ header nav {
     width: 100%;
     height: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     z-index: 1;
 
     & .menu-icon {
+        margin: 20px 25px;
         background: white;
         box-sizing: border-box;
         cursor: pointer;
@@ -39,33 +41,86 @@ header nav {
 
     & .menu {
         display: none;
-    }
+        width: 100%;
 
-    & .logo {
-        flex-shrink: 0;
-        padding-left: 20px;
-        padding-top: 8px;
-        width: 100px;
-        height: 80px;
+        &.showing {
+            display: block;
+        }
+
+        ul {
+            width: 100%;
+            text-align: center;
+            background-color: darkgrey;
+            padding: 0px;
+            margin: 0;
+            font-size: 16px;
+            color: black;
+            list-style: none;
+            font-weight: bold;
+            line-height: 35px;
+
+            & li {
+                color: black;
+                margin: 0;
+                line-height: 35px;
+
+                
+            }
+
+            & ul {
+                padding: 0;
+                margin: 0;
+                display: none;
+                background: white;
+            }
+
+            & li:hover ul {
+                display: block;
+            }
+
+            /* level 1 links */
+            & li a {
+                padding: 5px 15px;
+                text-decoration: none;
+                color: black;
+            }
+
+            /* level 2 links */
+            & ul a {
+                display: block;
+                padding: 5px 15px;
+                text-decoration: none;
+            }
+
+            & li a:hover {
+                background-color: #d56e2d;
+                border: 1px solid #d56e2d;
+                border-radius: 30px;
+                color: white;
+            }
+        }
     }
+}
+
+.logo {
+    flex-shrink: 0;
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 100px;
+    height: auto;
 }
 
 $bible-search-img-ratio: 1289 / 4736 * 100%;
 
 .container #bible-search {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     background-image: url("img/read-bible.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 100%;
+    background-size: cover;
+    margin: 0 auto;
     padding-top: $bible-search-img-ratio;
-}
-
-#bible-search h1 {
-    font-size: 10px;
-    background: indianred;
 }
 
 #bible-search form {
@@ -81,8 +136,6 @@ body .container {
     max-width: 100%;
     width: 100%;
 }
-
-$bible-search-img-ratio: 1289 / 4736 * 100%;
 
 .container #bible-search {
     display: flex;
@@ -106,8 +159,8 @@ $bible-search-img-ratio: 1289 / 4736 * 100%;
 }
 
 .question {
-    height: 300px;
-    width: 70%;
+    height: 500px;
+    width: 80%;
     margin: 40px auto;
     background: #ffeac3;
     box-shadow: 5px 10px 15px grey;
@@ -200,7 +253,7 @@ footer {
 }
 
 /* desktop */
-@media (min-width: 900px) {
+@media (min-width: 768px) {
     .logo {
         flex-shrink: 0;
         padding-left: 80px;
@@ -210,7 +263,6 @@ footer {
     }
 
     header nav {
-
         & .menu-icon {
             background: white;
             text-align: right;
@@ -222,62 +274,59 @@ footer {
 
         & .menu {
             display: block;
-        }
-
-        & ul {
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            display: flex;
-            justify-content: space-between;
-            color: black;
-            list-style: none;
-            font-weight: bold;
-            line-height: 10px;
-
-            & li {
-                position: relative;
-                display: inline;
-                color: black;
-                line-height: 20px;
-            }
+            width: unset;
 
             & ul {
-                position: absolute;
-                left: 0;
-                top: 100%;
-                padding: 0;
-                margin: 0;
-                display: none;
-                background: white;
-                border: 1px solid black;
-            }
-
-            & li:hover ul {
-                display: block;
-            }
-
-            /* level 1 links */
-            & li a {
-                padding: 5px 15px;
-                text-decoration: none;
-                min-width: 180px;
+                position: relative;
+                background-color: unset;
+                width: unset;
+                padding: 35px;
+                font-size: 16px;
+                border: none;
+                display: flex;
                 color: black;
-            }
+                list-style: none;
+                font-weight: bold;
+                line-height: 10px;
 
-            /* level 2 links */
-            & ul a {
-                display: block;
-                padding: 5px 15px;
-                text-decoration: none;
-                min-width: 180px;
-            }
+                & li {
+                    display: inline;
+                    color: black;
+                    line-height: 20px;
+                }
 
-            & li a:hover {
-                background-color: #d56e2d;
-                color: white;
+                & ul {
+                    position: absolute;
+                    margin-top: 25px;
+                    display: none;
+                    background: white;
+                    border: 1px solid black;
+                }
+
+                & li:hover ul {
+                    display: block;
+                }
+
+                /* level 1 links */
+                & li a {
+                    padding: 5px 15px;
+                    text-decoration: none;
+                    min-width: 180px;
+                    color: black;
+                }
+
+                /* level 2 links */
+                & ul a {
+                    display: block;
+                    padding: 5px 15px;
+                    text-decoration: none;
+                    min-width: 180px;
+                }
+
+                & li a:hover {
+                    color: white;
+                }
             }
         }
     }
-
 }
