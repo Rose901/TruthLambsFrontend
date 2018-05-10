@@ -2,12 +2,12 @@
 //menu toggle-button
 
 $(document).ready(function () {
-    $(".menu-icon").on("click",function() {
-
-        $(".menu").toggleClass("showing");
-
+    $('.footer-title-link').on('click', function() {
+        let colDiv = $(this).parent().parent();
+        let rowDiv = colDiv.parent();
+        rowDiv.find('.footer-content').removeClass("showing");
+        colDiv.find('.footer-content').addClass("showing");
     });
-    
 });
 
 
