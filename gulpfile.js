@@ -40,8 +40,12 @@ gulp.task('css', ['css:compile', 'css:minify']);
 gulp.task('js', function() {
   return gulp.src([
       './node_modules/jquery/dist/jquery.min.js',
+      './node_modules/tether/dist/js/tether.min.js',
+      './node_modules/tether-drop/dist/js/drop.min.js',
+      './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
       './node_modules/bootstrap/dist/js/bootstrap.min.js',
       './src/site.js',
+      './src/search.js',
     ])
     //.pipe(uglify())
     .pipe(concat('site.min.js'))

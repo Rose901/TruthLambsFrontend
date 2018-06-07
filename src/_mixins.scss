@@ -3,3 +3,57 @@
     font-size: 25px;
     text-align: center;
 }
+
+@mixin tag-list($smaller: false) {
+    & > ul {
+        li {
+            @if $smaller { font-size: 13px; }
+            @else { font-size: 14px; }
+            list-style: none;
+            display: inline-block;
+            padding: 5px 10px;
+            background: #fcf6e1;
+            border-radius: 20px;
+            margin: 2px 4px;
+        }
+    }
+}
+
+@mixin tab-list ($color){
+    & ul {
+        li {
+            position: relative;
+            list-style: none;
+            display: inline;
+            cursor: pointer;
+            
+            &::after{
+                content: " ";
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                background-color: $color;
+                width:0;
+                height: 3px;
+                transition: all 0.4s;
+            }
+           
+            &:hover {
+                color: $bright-orange;
+                
+            }
+            &:hover:after{
+                width: 100%;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+
+@mixin old-style-font{
+    font-family: "Old Standard TT";
+    
+   
+
+}
