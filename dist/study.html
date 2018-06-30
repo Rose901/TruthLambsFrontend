@@ -1,50 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="skeleton.css">
-    <link rel="stylesheet" type="text/css" href="truthlambs.css">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-    <title>Study</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <title>study</title>
 </head>
+
 <body>
-  <!--study-skill-start-->
- <section class="study">
-     
-  <h1>How to study the bible?</h1>
-<article>
-    <strong>Study Skills</strong>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis dignissimos 
-    obcaecati nihil soluta in praesentium et delectus explicabo esse distinctio odio sint accusamus ex
-    ercitationem ut possimus, labore enim quisquam non vitae iste. Dolorum distinctio amet impedit, eaque, p
+    <!--study-skill-start-->
+
+
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+
+            <div class="logo navbar-brand">
+                <img src="img/black-sheep.png">
+            </div>
+
+            <div class="question-part">
+                <div class="input-group col-md-8 col-lg-6 col-xl-12">
+                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search question" aria-label="Searching...."
+                        id="search-input">
+                    <span class="input-group-append">
+                        <button class="btn  border-left-0 border" type="button" id="search-button">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </button>
+                    </span>
+
+                    <div class="input-group-append">
+                        <a id="add-question-button" href="#first-question-modal">Add question</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse -collapsenavbar nav-menu" id="navbarMenu">
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="question.html">Questions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Study</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donation.html">Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <button onclick="document.getElementById('loginForm').style.display='block'" class="btn" type="button">Login</button>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <div id="w-prompt-container">
+            <div id="first-question-modal" class="mfp-hide white-popup">
+                <div class="first-question-prompt">
+                    <p class="prompt-title">You are asking your first question!</li>
+                        <li>How to quickly get a good answer:</li>
+                        <ul class="tip-list">
+                            <li>Keep your question short and to the point</li>
+                            <li>Check for grammar or spelling errors</li>
+                            <li>Phrase it like a question</li>
+                        </ul>
+                </div>
+                <div class="AskQuestionSelector TyperseachEsselector" tabindex="-1" id="start-type-question">
+                    <div class="selector-input-interaction">
+                        <div class="CharacterCounter fade-out"></div>
+                        <textarea class="selector-input text" type="text" rows="1" data-group="js-editable" placeholder="Ask your question here"></textarea>
+                        <hr>
+                    </div>
+                </div>
+                <div class="prompt-footer">
+                    <span class="text-links pl=5px">
+                        <a class="prompt-cancel" href="#">Canel</a>
+                        <label class="prompt-label">
+                            <input type="checkbox" id="prompt-footer-input">Add Anonymously
+                        </label>
+                    </span>
+                    <a class="prompt-submit-button" href="#">Add Question</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="loginForm" class="modal">
+            <form class="modal-content animate">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img/login-head.png" style="width:204px; height:203px;" alt="login-img" class="login-img">
+                </div>
+                <div class="container">
+                    <label for="uname">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button class="btn btn-sm" type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember">Remeber me
+                    </label>
+                    <span class="psw">Forgot
+                        <a href="#">password?</a>
+                    </span>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="container study-page">
+
+        <div class="study-section">
+            <div class="study-catalogues col-sm-2">
+                <ul>
+
+                    <li class="link-item">
+                        <a class="study-link active" href="https://www.biblestudytools.com/bible-study/">Bibel Study</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href=" https://www.biblestudytools.com/library/">Library</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/bible-study/prayers/">praryers</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.christianity.com/trivia/">Bible Trivaia</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/blogs/">Blogs</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/dictionaries/">Dictionaeries</a>
+
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/encyclopedias/">Encyclopedias</a>
+                    </li>
+
+
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/inspirations/">Inspirations</a>
+                    </li>
+
+
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/history/">History</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.christianity.com/trivia/">Other Resources</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="study-content col-sm-6">
+
+                <h5>How to study the bible?</h5>
+                <article>
+                    <strong>Study Skills</strong>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis dignissimos obcaecati nihil
+                        soluta in praesentium et delectus explicabo esse distinctio odio sint accusamus ex ercitationem ut
+                        possimus, labore enim quisquam non vitae iste. Dolorum distinctio amet impedit, eaque, p
+                </article>
+
+                <div class="improve-part">
+                    <h5>what is you want to improve through the bibel?</h5>
+                    1. your personality? 2. your patience? 3. your relationship with someone?
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. lore, labore quod eum dignissimos
+                    </li>
+                </div>
+
+                <h5>How to study the bible?</h5>
+                <article>
+                    <strong>Study Skills</strong>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis dignissimos obcaecati nihil
+                        soluta in praesentium et delectus explicabo esse distinctio odio sint accusamus ex ercitationem ut
+                        possimus, labore enim quisquam non vitae iste. Dolorum distinctio amet impedit, eaque, p
+                </article>
+
+                <div class="improve-part">
+                    <h5>what is you want to improve through the bibel?</h5>
+                    1. your personality? 2. your patience? 3. your relationship with someone?
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. lore, labore quod eum dignissimos
+                    </li>
+                </div>
+
+
+
+                </div>
+
+                <div class="prayers col-sm-4">
+                    <h5> What do you want to pray?</h5>
+
+                    <form>
+                        <p>Plese type your pray topic:</p>
+                        <input type="text" placeholder="">
+                        <input type="text" placeholder="Enter your Email here"><button>submit</button>
+                    </form>
+
+
+
+                </div>
+            
+        </div>
+    </div>
+    <footer>
+            <div class="container-fluid">
+                <div class="row footer-menu">
+                    <div class="col-md-2">
+                        <div class="logo footer-title">
+                            <img src="img/white-sheep.png" class="responsive">
+                        </div>
+                    </div>
     
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quidem dolores nihil quam recusandae aliquid, error, officia maxime reiciendis itaque, ad natus! Tempora doloribus voluptate id ipsum incidunt. Eligendi modi repellat, necessitatibus obcaecati dolores commodi reprehenderit, quod veniam aliquam provident veritatis at fugit est suscipit iste ipsa rerum repudiandae, eveniet et ullam eius officiis dolorum nisi consequuntur! Itaque amet vero, eaque minus sed voluptates! Fugit autem ea amet asperiores porro architecto eos, explicabo reiciendis perferendis quo laboriosam earum quae ex, animi voluptatum impedit dolores in quaerat quisquam veniam. Temporibus sit officia qui ratione, tempore, quam, mollitia pariatur accusamus ducimus recusandae voluptatibus quia. Id, deleniti minima vitae porro est voluptate totam ab nihil magni fuga excepturi harum nesciunt? Inventore optio obcaecati maiores dolor labore sapiente quas reprehenderit placeat, quo voluptas, quisquam, excepturi voluptate! Quos ullam ipsa iusto necessitatibus eum magnam rerum dolor deleniti cum, ipsam ducimus vitae qui earum! Numquam illum aperiam perspiciatis dolorum enim! Deleniti assumenda nulla eligendi eum nam cumque est iure perspiciatis nostrum! Tempore rem blanditiis adipisci laudantium dolorum sapiente voluptatum, praesentium quaerat, delectus mollitia eveniet iusto libero aliquam consequuntur explicabo dolore quas necessitatibus officiis ipsam suscipit sint tempora. Similique ab quod natus ad. Hic eum reiciendis fugiat voluptate rem, temporibus et deleniti eveniet optio tenetur amet sed dolore, in nostrum ex modi asperiores quos sunt quam suscipit! Ipsam quia sit est a maiores eos, fuga sed. Atque praesentium, quasi exercitationem nulla debitis eum non. Voluptate quas totam laboriosam similique fuga, aliquam vero repudiandae fugiat perspiciatis, ex aspernatur dolor consequatur corporis! Obcaecati qui ipsum, hic veniam, alias magni voluptas nihil vero, natus rem nam explicabo soluta quos provident? Ipsum dicta a maxime, tenetur voluptates mollitia reiciendis consectetur accusamus rem culpa aspernatur dolorem quod, eaque illo sequi. Consequatur dolore eaque nobis quaerat velit a quo nihil voluptas reiciendis facilis!
+                    <div class="col-md-3">
+                        <div class="footer-title">
+                            <a class="footer-title-link">
+                                About
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <ul>
+                                <li>
+                                    <a href="study.html">About us</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">Copyright</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">Report a problem</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">Privacy Policy</a>
+                                </li>
     
-    laceat odit asperiores ut natus dolore eum eligendi sit nobis beatae quis excepturi libero eius nihil, recusandae et quam consectetur soluta sint? Doloribus quos ut inventore repellat blanditiis nam veritatis consequuntur esse unde, necessitatibus, officia explicabo dicta qui distinctio voluptate velit facere architecto quis eveniet, perspiciatis odit? Odit vel magni veniam totam illum, ipsum aperiam neque necessitatibus sapiente, nostrum atque eum labore.</p>
-
-
-
-</article>
-
- </section>
-<section class="populer-part">
-<h1>What is populer part of bibel</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum incidunt voluptate repudiandae, blanditiis odio vel iste autem cum tenetur fugiat sequi velit laborum sapiente. Suscipit quaerat aliquam porro temporibus, fuga quidem! In inventore unde ipsam rerum, possimus assumenda sed, nobis consequuntur corporis sunt, cum sequi velit vero eligendi doloribus facilis voluptatem aut quidem nihil ratione recusandae nisi cumque tempora placeat. Recusandae odit dolorum qui minus fugiat aperiam aliquid rerum exercitationem veritatis quae dicta, quod saepe maiores, similique temporibus, velit libero reiciendis reprehenderit. Consequatur ab architecto obcaecati, temporibus reprehenderit, tenetur eaque quisquam illo soluta aliquid sapiente expedita provident earum sint natus dolores distinctio. Adipisci ducimus tenetur sequi ut quidem rerum suscipit totam saepe est omnis maxime tempora, blanditiis ea doloremque amet earum fugit. Laboriosam a soluta ipsa eius. Error eligendi sit magnam asperiores architecto tenetur et at, aliquid quibusdam laborum incidunt dicta cumque odio praesentium in natus perferendis voluptatem necessitatibus est commodi ullam ad aut dolores placeat. Sint eum distinctio facere placeat quas nihil accusantium ducimus vero! Repellat voluptas libero consequatur adipisci aut molestias alias deleniti, natus provident, assumenda architecto omnis pariatur quod iste? Vel animi officiis possimus ipsum vero magni vitae et ipsam voluptates officia asperiores nulla repellat, a corrupti?</p>
-</section>
-
-
-<section class="improve-part">
-<h1>what is you want to improve through the bibel?</h1>
- 1. your personality?
- 2. your patience?
- 3. your relationship with someone?
-<p>
- Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quisquam excepturi cum beatae voluptates illum eaque, magnam dolore tempora? Ratione voluptates ipsum assumenda eveniet ad quisquam voluptate sed commodi placeat, nisi nesciunt doloremque nam qui debitis dolor a cupiditate distinctio pariatur illo itaque voluptatem incidunt earum? Quas ad dolore, labore quod eum dignissimos voluptas tempore commodi perspiciatis! Dolores modi magnam neque? Rerum atque eveniet rem asperiores molestias, autem voluptates vitae. Asperiores architecto delectus quaerat magnam exercitationem. Nesciunt, dignissimos laboriosam aut deserunt consectetur iusto hic illo! Est adipisci culpa in quae suscipit aspernatur accusamus totam recusandae dolores, voluptas omnis similique repellat minima dignissimos necessitatibus iusto a quam maxime deserunt ipsa porro, natus voluptatibus aperiam. Nulla reprehenderit corrupti illum amet deleniti magni itaque tempora quibusdam modi eius. Nisi sint quos dolores esse inventore animi quidem quibusdam qui et reiciendis ipsa veritatis magnam accusamus voluptas repellendus delectus omnis, excepturi iusto! Eos eligendi reiciendis cum quibusdam libero! Nostrum tenetur dolores nobis necessitatibus. Cupiditate possimus tempore cumque sed porro debitis, tempora numquam. Accusamus quaerat corrupti quasi illum animi, iste quis sit dolores, eveniet, obcaecati natus maiores ad enim culpa voluptas optio ipsa nesciunt adipisci eos hic ipsum. Aliquam delectus, iste recusandae officiis deserunt eaque saepe minima similique, nostrum doloremque dolor earum. Illum molestias aspernatur fugit magni pariatur. Soluta tempora, fugiat rerum harum eum quis repellendus totam voluptates consequuntur autem corrupti enim incidunt placeat inventore numquam architecto quos mollitia illo qui doloremque culpa laudantium ipsum! Quia explicabo earum nesciunt est laborum vel. Architecto quo perferendis incidunt blanditiis quasi, vel amet asperiores accusamus quisquam possimus odio veritatis ipsum alias laudantium similique maxime deserunt, quibusdam nesciunt fugiat. Ipsa officia facilis fugiat veritatis quae, tempora, dolore explicabo corporis dolorum corrupti distinctio eum mollitia, quos nulla. Sed atque tenetur, vero veniam at laudantium, sit ipsam vel, quos autem obcaecati quia.
-
-</p>
-</section>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-3">
+                        <div class="footer-title">
+                            <a class="footer-title-link">
+                                Link
+                            </a>
+                        </div>
+    
+                        <div class="footer-content">
+                            <ul>
+                                <li>
+                                    <a href="study.html">Gospel.com</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">HarperCollins</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">Faith-Gateway</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">Christian Publishing</a>
+                                </li>
+                                <li>
+                                    <a href="study.html">StudyGate way</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <div class="footer-title">
+                            <a class="footer-title-link">
+                                Contact Us
+                            </a>
+                        </div>
+                        <div class="footer-content incon-bar">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-phone-square"></i>12345678
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-at"></i>truthlambs@hotmail.com
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
+                                    </a>
+                                </li>
+    
+    
+                            </ul>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="site.min.js"></script>
 </body>
+
 </html>

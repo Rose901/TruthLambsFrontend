@@ -2,7 +2,7 @@
 
 $(function() {
 
-    document.getElementById('search-input').addEventListener('keypress', getJson);
+    document.getElementById('search-input').addEventListener('keyup', getJson);
 
     function getJson() {
         const server = 'http://192.168.1.66:9342'
@@ -34,12 +34,11 @@ $(function() {
     const drop = new Drop({
       target: document.querySelector('#search-input'),
       position: 'bottom left',
-      openOn: 'click',
+      openOn: 'focus',
       content: `<ul id="search-results">
                 </ul>`,
                
       classes: 'drop-theme-arrows'
     });
-    drop.open();
 
 });
