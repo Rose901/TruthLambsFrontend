@@ -11,7 +11,7 @@ var browserSync = require('browser-sync').create();
 
 // Compile SCSS
 gulp.task('css:compile', function() {
-  return gulp.src('./src/main.scss')
+  return gulp.src('./src/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass.sync({
       outputStyle: 'expanded'

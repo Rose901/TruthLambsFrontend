@@ -1,0 +1,160 @@
+.navbar {
+    background-color:$navbar-color;
+
+    .logo {
+        order: 1;
+    }
+
+    .question-part {
+        order: 3;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        order: 2;
+    }
+
+    .nav-menu {
+        order: 4;
+
+        @include tab-list(rgb(132, 216, 246));
+
+        width: 100%;
+
+        & .navbar-nav .nav-item {
+            padding: 5px;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        .question-part {
+            order: 2;
+            width: 65%;
+        }
+
+        .navbar-toggler {
+            order: 3;
+        }
+
+        .nav-menu {
+            order: 4;
+        }
+    }
+
+
+    @include media-breakpoint-up(md) {
+        .question-part {
+            order: 3;
+            width: 100%;
+        }
+
+        .nav-menu {
+            order: 2;
+            display: block;
+            width: unset;
+            margin-left: auto;
+        }
+
+        & {
+            flex-wrap: wrap;
+        }
+    }
+
+
+    @include media-breakpoint-up(xl) {
+        .logo {
+            flex-grow: 0;
+        }
+
+        .question-part {
+            order: 2;
+            width: unset;
+            flex-grow: 1;
+            padding: 0 30px;
+        }
+
+        .nav-menu {
+            order: 3;
+            margin-left: unset;
+            flex-grow: 0;
+        }
+    }
+
+
+    h3 {
+        @include title-text;
+
+        display: block;
+        width: 100%;
+        padding: 28px 0;
+        margin-top: 60px;
+        margin-bottom: 0;
+        border: $card-border-width solid $card-border-color;
+        border-bottom: none;
+
+        @include border-top-radius($card-border-radius);
+
+        margin-bottom: -3px;
+    }
+
+    .logo img {
+        flex-shrink: 0;
+        padding-left: 10px;
+        padding-top: 0px;
+        width: 100px;
+        height: auto;
+    }
+
+    .btn {
+        background: white;
+        color: black;
+        border: 1px solid darkgray;
+        border-radius: 10px;
+
+        &:hover {
+            background: rgb(132, 216, 246);
+            border: 1px solid rgb(132, 216, 246);
+            color: white;
+        }
+    }
+
+    .question-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        margin-left: 0;
+        margin-top: 4px; // get beyond navbar height
+
+        #search-button {
+            height: 40px;
+
+            svg {
+                width: 24px;
+                height: 24px;
+                fill: $gray-600;
+            }
+        }
+
+        & > .input-group {
+            height: 40px;
+
+            & .form-control:focus {
+                border-color: rgb(132, 216, 246);
+            }
+
+            .input-group-append a {
+                color: white;
+                font-size: 13px;
+                text-decoration: none;
+                background-color: #4077AA;
+                border: 1px solid rgb(132, 216, 246);
+                border-radius: 5px;
+                padding-top: 6px;
+                padding-right: 4px;
+                padding-left: 4px;
+                margin-left: 12px;
+            }
+        }
+    }
+}

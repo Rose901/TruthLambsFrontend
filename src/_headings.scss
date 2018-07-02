@@ -1,0 +1,21 @@
+h1 {
+    color: rgb(40, 40, 48);
+    @include old-style-font;
+}
+
+h2 {
+    font-size: 18pt;
+}
+
+h3 {
+    font-size: 14pt;
+}
+
+h4 {
+    @include old-style-font;
+    font-size: 14pt;
+    color: #4cb1d5;
+    padding-top: 15px;
+    font-weight: 300;
+    width: 100%;
+}

@@ -6,4 +6,17 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-@import 'truthlambs';
+/* Site-wide */
+@import 'global';
+@import 'headings';
+@import 'footer';
+@import 'navbar';
+@import 'modals';
+
+/* Pages / Components */
+@import 'home';
+@import 'questions';
+@import 'study';
+@import 'community';
+@import 'aboutus';
+@import 'donation';

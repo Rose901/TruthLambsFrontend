@@ -1,0 +1,26 @@
+.study-page .study-section {
+    width: 100%;
+    background-color: rgb(239, 242, 245);
+    display: flex;
+    padding: 30px 35px;
+
+    & .study-catalogues {
+        width: fit-content;
+
+        ul {
+            list-style-type: square;
+
+            & li a {
+                color: black;
+
+                &:hover {
+                    color: #146B86;
+                }
+            }
+        }
+    }
+
+    & .prayers {
+        padding: 20px 4 5px;
+    }
+}

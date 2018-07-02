@@ -1,0 +1,12 @@
+.donation {
+    background-color: rgb(180, 201, 221);
+    padding: 20px 20px;
+    text-align: center;
+
+    & .donation-img img {
+        width: 300px;
+        height: 200px;
+        margin-bottom: 15px;
+        border: 1px solid bisque;
+    }
+}
