@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+
+/* donation-left-part */
 .donation {
     background-color: rgb(180, 201, 221);
     padding: 20px 20px;
@@ -8,5 +13,121 @@
         height: 200px;
         margin-bottom: 15px;
         border: 1px solid bisque;
+    }
+}
+
+/* donation-right-part */
+
+.donation-content {
+    width: 445px;
+    height: 748.5px;
+    background: whitesmoke;
+
+    & .donate-title {
+        background-color: $footer-color;
+        color: white;
+        text-align: start;
+        padding: 5px 8px;
+        margin: 0;
+    }
+
+    .form-part {
+        width: 443px;
+        height: 706.5px;
+        border: 1px solod salmon;
+
+        .money-amount {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .btn-amount {
+            min-width: 56px;
+            font-weight: 300;
+            text-align: center;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857;
+            border-radius: 4px;
+            background-color: $footer-color;
+            border-color: $footer-color;
+            color: #ffffff;
+        }
+    }
+
+    .steps-tab {
+        width: 100%;
+        display: flex;
+
+        & > li {
+            padding: 0.75rem 0;
+            display: flex;
+            position: relative;
+            flex-grow: 1;
+            flex-direction: column;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #fff;
+            }
+
+            & > div {
+                display: flex;
+                padding: 0.75rem;
+
+                .number {
+                    width: 20px;
+                    height: 20px;
+                    font-size: 12px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: #fff;
+                    color: #A7A9AC;
+                    border: 1px solid #A7A9AC;
+                    border-radius: 50%;
+                    margin-right: 6px;
+                    margin-top: 2px;
+                }
+
+                & > p {
+                    display: inline;
+                    color: #aaa;
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+
+            & > .line {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                height: 6px;
+                width: 100%;
+                background-color: $ui-light;
+            }
+
+            &.active {
+                & > .line {
+                    background-color: $footer-color;
+                }
+                .number {
+                    position: relative;
+                    background-color: $footer-color;
+                    border-color: $footer-color;
+                    color: $footer-color;
+
+                    &::before {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        font-size: 12px;
+                        content: "\f00c";
+                        position: absolute;
+                        left: 3px;
+                        top: 1px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
 }
