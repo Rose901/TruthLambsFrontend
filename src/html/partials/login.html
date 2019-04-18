@@ -1,0 +1,91 @@
+<div id="loginForm" class="mfp-hide">
+
+    <ul class="tab-group">
+        <li class="tab">
+            <a href="#signup">Sign Up</a>
+        </li>
+        <li class="tab active">
+            <a href="#login">Log In</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="login">
+            <h2>Welcome Back!</h2>
+
+            <form action="login.php" method="post">
+                <div class="field-wrap">
+                    <label class="">
+                        Email Address
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
+
+
+                <div class="field-wrap">
+                    <label class="">
+                        Password
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+                <p class="forgot">
+                    <a href="forgot.php">Forgot Password</a>
+                </p>
+                <button class="button button-block" />Log In</button>
+
+            </form>
+
+        </div>
+
+
+        <div id="signup">
+            <h2>Sign up for Free</h2>
+
+            <form action="register.php" method="post" autocomplete="off">
+
+                <div class="top-row">
+
+                    <div class="field-wrap">
+                        <label>
+                            First Name
+                            <span class="reg">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Last Name
+                            <span class="reg">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password
+                        <span class="req">*</span>
+                    </label>
+
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+
+                <button type="sumbit" class="button button-block" />Register</button>
+
+            </form>
+        </div>
+    </div>
+</div>

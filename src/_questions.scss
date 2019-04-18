@@ -1,6 +1,29 @@
+
+.featured-part {
+    display: flex;
+    flex-direction: column;
+}
+
+@include media-breakpoint-up(sm) {
+    .featured-part {
+        padding: 20px 50px;
+        margin-top: 50px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .featured-part {
+        flex-direction: row;
+    }
+}
+
 .categories-buttons {
     flex: 0 0 400px;
     min-width: 400px;
+
+
+    @include media-breakpoint-up(lg) {
+    }
 
     .wrapper-buttons {
         display: grid;
@@ -27,6 +50,8 @@
                 padding-top: 10px;
                 padding-left: 5px;
                 padding-right: 8px;
+                
+               
 
                 & i {
                     font-size: 20px;
@@ -165,7 +190,10 @@
 
 .questions {
     flex-grow: 1;
-    padding-left: 60px;
+
+    @include media-breakpoint-up(lg) {
+        padding-left: 50px;
+    }
 
     & > .questions-nav {
         margin-top: 20px;
@@ -257,3 +285,7 @@
         }
     }
 }
+
+
+
+

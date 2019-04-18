@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <script src="site.min.js"></script>
+
+    <title>truthlambs</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        @include('./partials/navbar.html')
+
+       @include('./partials/w-prompt.html')
+
+       <!-- login-Part-sart -->
+       @include('./partials/login.html')
+    </div>
+        <!--login-part-over -->
+
+        <div class="row jumbotron">
+            <div class="col-sm-12">
+                <video id="bg-video" autoplay="true" loop="loop" preload="true" muted="muted">
+                    <source src="img/videos/Pexels Videos 2881.mp4" type="video/mp4" />
+                </video>
+                <div class="center jumbovidtext text-center">
+                    <h1 class="txtjumbo">
+                        Welcome to truth lambs.
+                        <br>Ask any spiritual questions and discuss the answers with like-minded people</h1>
+
+                    <p>
+                        <a class="btn center" id="learn-more-button" href="#" role="button">Learn more</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="container-fluid videos-part">
+                    <h2>Featured videos</h2>
+
+                    <div class="row">
+
+                        <div class="col-md-4 embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/grTuXo1hqN4" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="col-md-4 embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/ce4I5h0grXI" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="col-md-4 embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/yUq2xCad9LE" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <h2>Contributors</h2>
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" src="img/Steven-Bancarz.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Steven Bancarz</h5>
+                            <p class="card-text">Ex-New Ager. YouTuber. Exposing the New Age movement</p>
+
+                            <a class="web-address" href="http://reasonsforjesus.com/">http://reasonsforjesus.com</a>
+
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="img/norman-geisler.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Norman Geisler</h5>
+                            <p class="card-text">Norman Leo Geisler is a Christian systematic theologian and philosopher. He is the co-founder
+                                of two non-denominational Evangelical seminaries.</p>
+                            <a class="web-address" href="http://normangeisler.com">http://normangeisler.com</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="img/ravi-zacharias.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Ravi Zacharias</h5>
+                            <p class="card-text">an Indian-born Canadian-American Christian apologist. A defender of traditional evangelicalism.
+                                Zacharias is the author of numerous Christian books, including the Gold Medallion Book Award
+                                winner Can Man Live Without God? in the category "theology and doctrine" and Christian bestsellers
+                                Light in the Shadow of Jihad[4] and The Grand Weaver.</p>
+                            <a class="web-address" href="https://rzim.org/">https://rzim.org</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="img/Dr Michael Brown.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr Michael Brown</h5>
+                            <p class="card-text">A conservative radio host, author, professor and a noted proponent of Messianic Judaism and serves
+                                as a leader of the Charismatic Movement.</p>
+                            <a class="web-address" href="http://askdrbrown.org/">https://askdrbrown.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="media-icon row">
+            <a href="https://www.facebook.com/TruthLambs/">
+                <img src="img/facebook.png" alt="facebook" width="48" height="48">
+            </a>
+            <a href="https://twitter.com/truthlambs">
+                <img src="img/twitter.png" alt="twitter" width="48" height="48">
+            </a>
+            <a href="https://www.youtube.com/channel/UCLAVto2DpcyWq7Uh0wtcD_g">
+                <img src="img/youtube.png" alt="youtube" width="48" height="48">
+            </a>
+            <img src="img/instagram.png" alt="instagram" width="48" height="48">
+            <a href="https://plus.google.com/114486854147481269678">
+                <img src="img/google_plus.png" alt="google_plus" width="48" height="48">
+            </a>
+        </div>
+
+@include('./partials/prayer.html')
+@include('./partials/footer.html')
+
+</body>
+
+</html>

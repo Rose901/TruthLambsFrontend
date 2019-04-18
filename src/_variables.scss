@@ -1,13 +1,42 @@
 // in bootstrap:
 // $font-family-sans-serif
+$border-radius: 10px;
 $font-family-serif: "Old Standard TT";
 
 // disable bootstrap gutters
 $grid-gutter-width: 0;
 
+$body-bg: #fcfcfc;
+$form-bg:#ffffff;
+$white: white;
+
+$primary: #4077AA;
+$primary-light: lighten($primary,5%);
+$primary-dark: darken($primary,5%);
+$dark-blue:#083361;
+$gray-light: #a0b3b0;
+$gray: #aaa;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
 
 
+
+$categories-9:#f2f6f9;
+$categories-3:#c3d1dc;
+$bright-blue:#84d8f6;
+$light-blue:lightblue;
+$soft-gery:rgb(239, 242, 245);
+$pink:pink;
+$white:white;
 $bright-orange:#e6725a;
 $navbar-color:#EEEEE5;
-$footer-color:#4077AA;
+$footer-color: $primary;
 $ui-light:#f3f1ee;
+$light-grey:#464646;
+$font-color:rgba(0, 0, 0, 0.5);
+
+$tag-bg:#fcf6e1;
+$prayer-box-bg: $tag-bg;

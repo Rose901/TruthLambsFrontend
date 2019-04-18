@@ -9,21 +9,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
-    <script src="site.min.js"></script>
 
-    <title>aboutus </title>
+    <title>truthlambs</title>
 </head>
 
 <body>
-
-
 
     <div class="container-fluid">
 
         <nav class="navbar navbar-expand-md navbar-light fixed-top">
 
     <div class="logo navbar-brand">
-            <a href="index.html"><img src="img/black-sheep.png"></a> 
+        <img src="img/black-sheep.png">
     </div>
 
     <div class="question-part">
@@ -51,7 +48,9 @@
     <div class="collapse -collapsenavbar nav-menu" id="navbarMenu">
         <ul class="navbar-nav">
 
-            
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html">Home</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" href="question.html">Questions</a>
             </li>
@@ -69,11 +68,11 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="prayer-request.html">Prayer</a>
+                <a class="nav-link" href="notification.html">Prayer Request</a>
             </li>
-            <li class="nav-item" id="prayer-notification">
+            <li class="nav-item" id="Prayer-natification">
                 
-                <svg version="1.1" id="notification-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"
+                <svg version="1.1" id="notification-icon"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"
                     enable-background="new 0 0 1000 1000" xml:space="preserve">
                     <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
                     <g>
@@ -84,7 +83,6 @@
                     </g>
                 </svg>
 
-                <span class="badge">1</span>
             </li>
             <li class="nav-item">
                 <a href="#loginForm" class="btn" id="loginBtn">Login</a>
@@ -92,11 +90,7 @@
         </ul>
     </div>
 
-</nav> 
-
-
-       
-        <div id="w-prompt-container">
+</nav> <div id="w-prompt-container">
         <div id="first-question-modal" class="mfp-hide white-popup">
             <div class="first-question-prompt">
                 <p class="prompt-title">You are asking your first question!</p>
@@ -125,7 +119,6 @@
             </div>
         </div>
     </div>
-
 
         <!-- login-Part-sart -->
         <div id="loginForm" class="mfp-hide">
@@ -218,74 +211,7 @@
             </form>
         </div>
     </div>
-</div>
-
-
-
-
-
-    </div>
-
-    <div class="container">
-        <div class="about">
-            <div class="about-us col-md-6">
-                <h4>About Us</h4>
-                <div class="about-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, id reiciendis.
-                        <br> Voluptatum rerum nisi cumque tenetur a totam mollitia perspiciatis quidem!
-                        <br> Minima aperiam impedit ipsam suscipit veniam architecto voluptate repudiandae? Lorem ipsum dolor
-                        sit amet, consectetur adipisicing elit. Laboriosam, maxime ipsum eius, labore ipsa soluta perferendis
-                        qui alias laborum explicabo reprehenderit neque molestiae laudantium excepturi natus, facere itaque
-                        possimus non!
-                    </p>
-                    <img src="img/church1.jpg" width="200px" height="200px" alt="church-grop1">
-                    <img src="img/church2.jpg" width="200px" height="200px" alt="church-grop1">
-
-                </div>
-            </div>
-
-            <div class="location col-md-6">
-
-                <div class="google-map">
-                    <h4>We are here</h4>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.049373957886!2d174.76227901550254!3d-36.8652369881352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47dc97596917%3A0xeb05497890c03cd!2sLevel+1B%2F115+Khyber+Pass+Rd%2C+Grafton%2C+Auckland+1023!5e0!3m2!1sen!2snz!4v1530335733962"
-                        width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-                </div>
-
-
-                <div class="footer-content incon-bar">
-                    <h4>Contact us</h4>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-phone-square"></i>12345678
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-at"></i>truthlambs@hotmail.com
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
-                            </a>
-                        </li>
-
-
-                    </ul>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-    
+</div> 
 
 <div class="prayers">
         <div class="warning-part">
@@ -321,105 +247,141 @@
 
     </div>
 
+
+    </div>
+    <div class="container tabs" id="prayer-tab">
+        <ul id="paryer-links">
+            <li class="prayer-link"><a href="">Topic</a></li>
+            <li class="prayer-link"><a href="">Group</a></li>
+            <li class="prayer-link"><a href="">comments</a></li>
+            <li class="prayer-link"><a href="">Check your pary</a></li>
+            <li class="prayer-link"><a href="">Help others pray</a></li>
+            <li class="prayer-link"><a href="">Your message</a></li>
+        </ul>
+        <div class="prayer-content row">
+            <div class="col-sm-3 sub-part">
+                <ul>
+                    <li class="prayer-link"><a href="">Topic</a></li>
+                    <li class="prayer-link"><a href="">Group</a></li>
+                    <li class="prayer-link"><a href="">Comments</a></li>
+                    <li class="prayer-link"><a href="">Check your pary</a></li>
+                    <li class="prayer-link"><a href="">Help other pray</a></li>
+                    <li class="prayer-link"><a href="">Your message</a></li>
+                </ul>
+                
+            </div>
+            <div class="col-sm-9 main-content">
+                topic-content
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
     <footer>
-    <div class="container-fluid">
-        <div class="row footer-menu">
-            <div class="col-md-2">
-                <div class="logo footer-title">
-                    <img src="img/white-sheep.png" class="responsive">
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="footer-title">
-                    <a class="footer-title-link">
-                        About
-                    </a>
-                </div>
-                <div class="footer-content">
-                    <ul>
-                        <li>
-                            <a href="study.html">About us</a>
-                        </li>
-                        <li>
-                            <a href="study.html">Copyright</a>
-                        </li>
-                        <li>
-                            <a href="study.html">Report a problem</a>
-                        </li>
-                        <li>
-                            <a href="study.html">Privacy Policy</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="footer-title">
-                    <a class="footer-title-link">
-                        Link
-                    </a>
+        <div class="container-fluid">
+            <div class="row footer-menu">
+                <div class="col-md-2">
+                    <div class="logo footer-title">
+                        <img src="img/white-sheep.png" class="responsive">
+                    </div>
                 </div>
 
-                <div class="footer-content">
-                    <ul>
-                        <li>
-                            <a href="study.html">Gospel.com</a>
-                        </li>
-                        <li>
-                            <a href="study.html">HarperCollins</a>
-                        </li>
-                        <li>
-                            <a href="study.html">Faith-Gateway</a>
-                        </li>
-                        <li>
-                            <a href="study.html">Christian Publishing</a>
-                        </li>
-                        <li>
-                            <a href="study.html">StudyGate way</a>
-                        </li>
-                    </ul>
+                <div class="col-md-3">
+                    <div class="footer-title">
+                        <a class="footer-title-link">
+                            About
+                        </a>
+                    </div>
+                    <div class="footer-content">
+                        <ul>
+                            <li>
+                                <a href="study.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="study.html">Copyright</a>
+                            </li>
+                            <li>
+                                <a href="study.html">Report a problem</a>
+                            </li>
+                            <li>
+                                <a href="study.html">Privacy Policy</a>
+                            </li>
+
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="footer-title">
-                    <a class="footer-title-link">
-                        Contact Us
-                    </a>
+                <div class="col-md-3">
+                    <div class="footer-title">
+                        <a class="footer-title-link">
+                            Link
+                        </a>
+                    </div>
+
+                    <div class="footer-content">
+                        <ul>
+                            <li>
+                                <a href="study.html">Gospel.com</a>
+                            </li>
+                            <li>
+                                <a href="study.html">HarperCollins</a>
+                            </li>
+                            <li>
+                                <a href="study.html">Faith-Gateway</a>
+                            </li>
+                            <li>
+                                <a href="study.html">Christian Publishing</a>
+                            </li>
+                            <li>
+                                <a href="study.html">StudyGate way</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer-content incon-bar">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-phone-square"></i>12345678
-                            </a>
-                        </li>
 
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-at"></i>truthlambs@hotmail.com
-                            </a>
-                        </li>
+                <div class="col-md-4">
+                    <div class="footer-title">
+                        <a class="footer-title-link">
+                            Contact Us
+                        </a>
+                    </div>
+                    <div class="footer-content incon-bar">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-phone-square"></i>12345678
+                                </a>
+                            </li>
 
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
-                            </a>
-                        </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-at"></i>truthlambs@hotmail.com
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
+                                </a>
+                            </li>
 
 
-                    </ul>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-</footer>
+    </footer>
 
-
+    <!--login-part-over -->
 </body>
 
 </html>

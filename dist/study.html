@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <script src="site.min.js"></script>
+
     <title>study</title>
 </head>
 
@@ -21,64 +23,203 @@
 
 
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-md navbar-light fixed-top">
+       
+            <nav class="navbar navbar-expand-md navbar-light fixed-top">
 
-            <div class="logo navbar-brand">
-                <img src="img/black-sheep.png">
+    <div class="logo navbar-brand">
+            <a href="index.html"><img src="img/black-sheep.png"></a> 
+    </div>
+
+    <div class="question-part">
+        <div class="input-group col-md-8 col-lg-6 col-xl-12">
+            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search question" aria-label="Searching...."
+                id="search-input">
+            <span class="input-group-append">
+                <button class="btn  border-left-0 border" type="button" id="search-button">
+                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                    </svg>
+                </button>
+            </span>
+
+            <div class="input-group-append">
+                <a id="add-question-button" href="#first-question-modal">Add question</a>
             </div>
+        </div>
+    </div>
 
-            <div class="question-part">
-                <div class="input-group col-md-8 col-lg-6 col-xl-12">
-                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search question" aria-label="Searching...."
-                        id="search-input">
-                    <span class="input-group-append">
-                        <button class="btn  border-left-0 border" type="button" id="search-button">
-                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
-                            </svg>
-                        </button>
-                    </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-                    <div class="input-group-append">
-                        <a id="add-question-button" href="#first-question-modal">Add question</a>
-                    </div>
-                </div>
-            </div>
+    <div class="collapse -collapsenavbar nav-menu" id="navbarMenu">
+        <ul class="navbar-nav">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="question.html">Questions</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="study.html">Study</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="community.html">Community</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="donation.html">Donation</a>
+            </li>
 
-            <div class="collapse -collapsenavbar nav-menu" id="navbarMenu">
-                <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="prayer-request.html">Prayer</a>
+            </li>
+            <li class="nav-item" id="prayer-notification">
+                
+                <svg version="1.1" id="notification-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000"
+                    enable-background="new 0 0 1000 1000" xml:space="preserve">
+                    <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                    <g>
+                        <path d="M865.3,624.5c-88.5-74.4-88.2-293.4-88.2-295.8c0-165.5-135.4-230.1-175.9-245.6C588.4,40.1,547.8,10,500.4,10c-47.1,0-87.6,29.9-100.6,72.7C224.8,146.4,222.9,327,222.9,328.8c0,227.8-83.6,294-85.5,295.4c-54.4,46.3-57.1,110.7-57.1,116.5c10.4,73.6,59,99.8,101,99.8l631.7-0.2c32.1,0,57.9-9.3,76.7-27.7c30.1-29.3,30-70.8,30-72.3C919.7,665.9,866.6,625.5,865.3,624.5L865.3,624.5z M861.1,785.9c-11,10.7-27.2,16.1-48,16.1l-629.3,0.1l-2.4,19.3v-19.2c-15.6,0-52.8-6.5-61.1-63.2c0-0.6,2.6-50.8,42.5-85c4.2-3,100.2-75.5,100.2-325.2c0-1.6,1.7-161.8,158.8-213c7.8-1.8,13.5-7.8,14.9-15.3c5.3-30.1,32.1-52,63.8-52c31.8,0,58.7,22.1,63.9,52.4c1.3,7.1,6.6,12.9,13.7,15.1c6.5,2,159.1,50.2,159.1,212.8c-0.1,9.8-0.4,238.9,102.6,325.5c1.7,1.3,40,31.2,40,86.4C879.7,740.8,879.5,768.3,861.1,785.9L861.1,785.9z"
+                        />
+                        <path d="M646.6,862.7c-9.4-3.2-19.5,1.8-22.8,11.8c-14.6,45.4-65.6,77.1-123.9,77.1c-58.3,0-109.3-31.7-123.9-77c-3.3-10-13.4-14.9-22.8-11.8c-9.4,3.5-14.2,14.5-11,24.5C361.9,947.8,426.6,990,499.9,990c73.3,0,138-42.3,157.7-102.8C660.8,877.1,656,866.3,646.6,862.7"
+                        />
+                    </g>
+                </svg>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="question.html">Questions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Study</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="donation.html">Donation</a>
-                    </li>
-                    <li class="nav-item">
-                        <button onclick="document.getElementById('loginForm').style.display='block'" class="btn" type="button">Login</button>
-                    </li>
+                <span class="badge">1</span>
+            </li>
+            <li class="nav-item">
+                <a href="#loginForm" class="btn" id="loginBtn">Login</a>
+            </li>
+        </ul>
+    </div>
+
+</nav>
+
+            <div id="w-prompt-container">
+        <div id="first-question-modal" class="mfp-hide white-popup">
+            <div class="first-question-prompt">
+                <p class="prompt-title">You are asking your first question!</p>
+                <p>How to quickly get a good answer:</p>
+                <ul class="tip-list">
+                    <li>Keep your question short and to the point</li>
+                    <li>Check for grammar or spelling errors</li>
+                    <li>Phrase it like a question</li>
                 </ul>
             </div>
+            <div class="AskQuestionSelector TyperseachEsselector" tabindex="-1" id="start-type-question">
+                <div class="selector-input-interaction">
+                    <div class="CharacterCounter fade-out"></div>
+                    <textarea class="selector-input text" type="text" rows="1" data-group="js-editable" placeholder="Ask your question here"></textarea>
+                    <hr>
+                </div>
+            </div>
+            <div class="prompt-footer">
+                <span class="text-links pl=5px">
+                    <a class="prompt-cancel" href="#">Canel</a>
+                    <label class="prompt-label">
+                        <input type="checkbox" id="prompt-footer-input">Add Anonymously
+                    </label>
+                </span>
+                <a class="prompt-submit-button" href="#">Add Question</a>
+            </div>
+        </div>
+    </div>
+     
+            <!-- login-Part-sart -->
+            <div id="loginForm" class="mfp-hide">
 
-        </nav>
+    <ul class="tab-group">
+        <li class="tab">
+            <a href="#signup">Sign Up</a>
+        </li>
+        <li class="tab active">
+            <a href="#login">Log In</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="login">
+            <h2>Welcome Back!</h2>
+
+            <form action="login.php" method="post">
+                <div class="field-wrap">
+                    <label class="">
+                        Email Address
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
 
 
+                <div class="field-wrap">
+                    <label class="">
+                        Password
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+                <p class="forgot">
+                    <a href="forgot.php">Forgot Password</a>
+                </p>
+                <button class="button button-block" />Log In</button>
+
+            </form>
+
+        </div>
+
+
+        <div id="signup">
+            <h2>Sign up for Free</h2>
+
+            <form action="register.php" method="post" autocomplete="off">
+
+                <div class="top-row">
+
+                    <div class="field-wrap">
+                        <label>
+                            First Name
+                            <span class="reg">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>
+                            Last Name
+                            <span class="reg">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off" />
+                    </div>
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Email Address
+                        <span class="reg">*</span>
+                    </label>
+                    <input type="email" required autocomplete="off" />
+                </div>
+
+                <div class="field-wrap">
+                    <label>
+                        Set A Password
+                        <span class="req">*</span>
+                    </label>
+
+                    <input type="password" required autocomplete="off" />
+                </div>
+
+
+                <button type="sumbit" class="button button-block" />Register</button>
+
+            </form>
+        </div>
+    </div>
+</div>
         <div id="w-prompt-container">
             <div id="first-question-modal" class="mfp-hide white-popup">
                 <div class="first-question-prompt">
@@ -110,37 +251,105 @@
         </div>
 
 
+   
 
+        <!-- login-Part-sart -->
+        <div id="loginForm" class="mfp-hide">
 
-        <div id="loginForm" class="modal">
-            <form class="modal-content animate">
-                <div class="imgcontainer">
-                    <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="img/login-head.png" style="width:204px; height:203px;" alt="login-img" class="login-img">
+                <ul class="tab-group">
+                    <li class="tab">
+                        <a href="#signup">Sign Up</a>
+                    </li>
+                    <li class="tab active">
+                        <a href="#login">Log In</a>
+                    </li>
+                </ul>
+    
+                <div class="tab-content">
+                    <div id="login">
+                        <h2>Welcome Back!</h2>
+    
+                        <form action="login.php" method="post">
+                            <div class="field-wrap">
+                                <label class="">
+                                    Email Address
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" />
+                            </div>
+    
+    
+                            <div class="field-wrap">
+                                <label class="">
+                                    Password
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" />
+                            </div>
+    
+                            <p class="forgot">
+                                <a href="forgot.php">Forgot Password</a>
+                            </p>
+                            <button class="button button-block" />Log In</button>
+    
+                        </form>
+    
+                    </div>
+    
+    
+                    <div id="signup">
+                        <h2>Sign up for Free</h2>
+    
+                        <form action="register.php" method="post" autocomplete="off">
+    
+                            <div class="top-row">
+    
+                                <div class="field-wrap">
+                                    <label>
+                                        First Name
+                                        <span class="reg">*</span>
+                                    </label>
+                                    <input type="text" required autocomplete="off" />
+                                </div>
+    
+                                <div class="field-wrap">
+                                    <label>
+                                        Last Name
+                                        <span class="reg">*</span>
+                                    </label>
+                                    <input type="text" required autocomplete="off" />
+                                </div>
+                            </div>
+    
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" />
+                            </div>
+    
+                            <div class="field-wrap">
+                                <label>
+                                    Set A Password
+                                    <span class="req">*</span>
+                                </label>
+    
+                                <input type="password" required autocomplete="off" />
+                            </div>
+    
+    
+                            <button type="sumbit" class="button button-block" />Register</button>
+    
+                        </form>
+                    </div>
                 </div>
-                <div class="container">
-                    <label for="uname">
-                        <b>Username</b>
-                    </label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label for="psw">
-                        <b>Password</b>
-                    </label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <button class="btn btn-sm" type="submit">Login</button>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember">Remeber me
-                    </label>
-                    <span class="psw">Forgot
-                        <a href="#">password?</a>
-                    </span>
-                </div>
-
-            </form>
-
+            </div>
         </div>
+            <!--login-part-over -->
+    
 
-    </div>
+    
 
 
 
@@ -149,7 +358,7 @@
 
     <div class="container study-page">
 
-        <div class="study-section">
+        <div class="row study-section">
             <div class="study-catalogues col-sm-2">
                 <ul>
 
@@ -234,128 +443,158 @@
                     </li>
                 </div>
 
+            </div>
 
-
-                </div>
-
-                <div class="prayers col-sm-4">
-                    <h3> What do you want to pray?</h3>
-
-                    <form>
-                        <p>Plese type your pray topic:</p>
-                        <input type="text" placeholder="">
-                        <input type="text" placeholder="Enter your Email here"><button>submit</button>
-                    </form>
-
-
-
-                </div>
-            
         </div>
     </div>
+
+
+    <div class="media-icon row">
+        <a href="https://www.facebook.com/TruthLambs/">
+            <img src="img/facebook.png" alt="facebook" width="48" height="48">
+        </a>
+        <img src="img/twitter.png" alt="twitter" width="48" height="48">
+        <img src="img/youtube.png" alt="youtube" width="48" height="48">
+        <img src="img/instagram.png" alt="instagram" width="48" height="48">
+        <img src="img/google_plus.png" alt="google_plus" width="48" height="48">
+    </div>
+   
+       
+    
+
+<div class="prayers">
+        <div class="warning-part">
+            <p>Do you need prayer ?</p>
+            <svg version="1.1" id="praying-hands" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                y="0px" viewBox="0 0 492.388 492.388" xml:space="preserve">
+                <g>
+                    <path d="M217.015,189.087c-15.393-5.529-32.371,2.48-37.893,17.882l-17.729,49.416l-1.777-30.452l56.055-155.7
+                        c3.762-10.393-0.752-22.195-10.865-27.299c-10.93-5.521-24.258-1.136-29.779,9.794L96.425,208.314
+                        c-1.682,3.361-2.673,7.264-2.673,11.282l0.416,117.078l-72.232,37.924C1.9,385.119-5.813,409.881,4.701,429.908
+                        c10.529,20.035,35.283,27.748,55.318,17.227l133.504-70.104l3.058-1.601c8.945-4.769,15.681-13.481,17.521-24.259l22.114-129.207
+                        C238.601,208.056,230.76,194.015,217.015,189.087z" />
+                    <path d="M470.453,374.597l-72.232-37.924l0.416-117.078c0-4.018-0.991-7.921-2.673-11.282L317.363,52.727
+                        c-5.521-10.93-18.85-15.314-29.779-9.794c-10.113,5.104-14.626,16.905-10.865,27.299l56.055,155.7l-1.776,30.452l-17.729-49.416
+                        c-5.522-15.401-22.5-23.411-37.893-17.882c-13.746,4.929-21.587,18.97-19.203,32.877l22.115,129.207
+                        c1.84,10.778,8.576,19.491,17.521,24.259l3.058,1.601l133.504,70.104c20.035,10.521,44.789,2.808,55.318-17.227
+                        C498.201,409.881,490.488,385.119,470.453,374.597z" />
+                </g>
+            </svg>
+        </div>
+        <div class="hide-part">
+            <h3> What do you want to pray?</h3>
+
+            <form class="pray-form">
+                <p>Plese type your pray topic:</p>
+                <input type="text" class="toppic-input form-control" placeholder="">
+                <textarea name="" rows="8"></textarea>
+                <input type="text" class="E-mail-input form-control" placeholder="Enter your Email here">
+
+                <button class="btn btn-md">submit</button>
+            </form>
+        </div>
+
+    </div>
+
     <footer>
-            <div class="container-fluid">
-                <div class="row footer-menu">
-                    <div class="col-md-2">
-                        <div class="logo footer-title">
-                            <img src="img/white-sheep.png" class="responsive">
-                        </div>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <div class="footer-title">
-                            <a class="footer-title-link">
-                                About
-                            </a>
-                        </div>
-                        <div class="footer-content">
-                            <ul>
-                                <li>
-                                    <a href="study.html">About us</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">Copyright</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">Report a problem</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">Privacy Policy</a>
-                                </li>
-    
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-3">
-                        <div class="footer-title">
-                            <a class="footer-title-link">
-                                Link
-                            </a>
-                        </div>
-    
-                        <div class="footer-content">
-                            <ul>
-                                <li>
-                                    <a href="study.html">Gospel.com</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">HarperCollins</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">Faith-Gateway</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">Christian Publishing</a>
-                                </li>
-                                <li>
-                                    <a href="study.html">StudyGate way</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-4">
-                        <div class="footer-title">
-                            <a class="footer-title-link">
-                                Contact Us
-                            </a>
-                        </div>
-                        <div class="footer-content incon-bar">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-phone-square"></i>12345678
-                                    </a>
-                                </li>
-    
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-at"></i>truthlambs@hotmail.com
-                                    </a>
-                                </li>
-    
-                                <li>
-                                    <a href="#">
-                                        <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
-                                    </a>
-                                </li>
-    
-    
-                            </ul>
-    
-                        </div>
-                    </div>
+    <div class="container-fluid">
+        <div class="row footer-menu">
+            <div class="col-md-2">
+                <div class="logo footer-title">
+                    <img src="img/white-sheep.png" class="responsive">
                 </div>
             </div>
-    
-        </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="site.min.js"></script>
+
+            <div class="col-md-3">
+                <div class="footer-title">
+                    <a class="footer-title-link">
+                        About
+                    </a>
+                </div>
+                <div class="footer-content">
+                    <ul>
+                        <li>
+                            <a href="study.html">About us</a>
+                        </li>
+                        <li>
+                            <a href="study.html">Copyright</a>
+                        </li>
+                        <li>
+                            <a href="study.html">Report a problem</a>
+                        </li>
+                        <li>
+                            <a href="study.html">Privacy Policy</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="footer-title">
+                    <a class="footer-title-link">
+                        Link
+                    </a>
+                </div>
+
+                <div class="footer-content">
+                    <ul>
+                        <li>
+                            <a href="study.html">Gospel.com</a>
+                        </li>
+                        <li>
+                            <a href="study.html">HarperCollins</a>
+                        </li>
+                        <li>
+                            <a href="study.html">Faith-Gateway</a>
+                        </li>
+                        <li>
+                            <a href="study.html">Christian Publishing</a>
+                        </li>
+                        <li>
+                            <a href="study.html">StudyGate way</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="footer-title">
+                    <a class="footer-title-link">
+                        Contact Us
+                    </a>
+                </div>
+                <div class="footer-content incon-bar">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-phone-square"></i>12345678
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-at"></i>truthlambs@hotmail.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-home"></i>Level 1B, 115 Khyber Pass Road, Auckland, New Zealand
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
 </body>
 
 </html>

@@ -14,7 +14,7 @@ h3 {
 h4 {
     @include old-style-font;
     font-size: 14pt;
-    color: #4cb1d5;
+    color: $bright-blue;
     padding-top: 15px;
     font-weight: 300;
     width: 100%;

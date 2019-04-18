@@ -1,0 +1,150 @@
+* {
+    a.active {
+        color: $primary;
+        font-weight: bold;
+
+        &:hover {
+            color: black;
+        }
+    }
+}
+
+#prayer-tab {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.5);
+
+    & #paryer-links {
+        width: 100%;
+        padding: 20px 10%;
+        display: flex;
+        margin-bottom: 25px;
+        justify-content: space-around;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.5);
+
+        .prayer-link {
+            font-size: 16px;
+            list-style: none;
+            display: inline-block;
+        }
+    }
+
+    & .prayer-content-1 {
+        & .sub-part {
+            background-color: $categories-3;
+            line-height: 3em;
+            padding: 20px 50px;
+            align-items: center;
+        }
+
+        & .main-content {
+            background-color: $categories-9;
+            width: 100%;
+            padding: 5px 15px;
+            color: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+
+            ul {
+                width: 100%;
+                padding: 10px 10px;
+                margin-bottom: 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+
+                li:hover {
+                    color: $primary;
+                }
+            }
+
+            H4 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+    .prayer-content-2 {
+        & .sub-part {
+            background-color: $categories-3;
+            line-height: 3em;
+            padding: 20px 50px;
+            align-items: center;
+        }
+
+        & .main-content {
+            background-color: $categories-9;
+            width: 100%;
+            padding: 5px 15px;
+            color: rgba(0, 0, 0, 0.5);
+            box-sizing: border-box;
+
+            ul {
+                width: 100%;
+                padding: 10px 10px;
+                margin-bottom: 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: white;
+
+                li:hover {
+                    color: $primary;
+                }
+            }
+
+            H4 {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            p {
+                text-align: justify;
+            }
+          
+           .group-list{
+               width:100%;
+               display: inline-block;
+               
+               & .group-list-item{
+                  width:100%;
+                   height: auto;
+                   background: #fff;
+                   border: solid 1px #d9d9d9;
+                   border-radius: 5px;
+                   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+                   margin-top: 15px;
+                   padding: 10px;
+                   .group-detail{
+
+                    .icons{
+                      
+                        float: right;
+                        font-weight: bold;
+                    }
+                    .group-list-link{
+                        color:black;
+                    }
+                    .open-group{
+                        margin-left:20px;
+                        color:green;
+                        font-weight: bold;
+                    }
+
+                   }
+                    
+
+                   
+                   
+               }
+           }
+        }
+    }
+}

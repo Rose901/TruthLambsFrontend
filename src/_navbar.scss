@@ -1,5 +1,5 @@
 .navbar {
-    background-color:$navbar-color;
+    background-color: $navbar-color;
 
     .logo {
         order: 1;
@@ -10,6 +10,16 @@
         width: 100%;
     }
 
+    .nav-item .nav-link {
+        .active {
+            color: $primary;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
     .navbar-toggler {
         order: 2;
     }
@@ -17,13 +27,41 @@
     .nav-menu {
         order: 4;
 
-        @include tab-list(rgb(132, 216, 246));
+        @include tab-list($bright-blue);
 
         width: 100%;
 
         & .navbar-nav .nav-item {
             padding: 5px;
         }
+
+        #prayer-notification {
+            position: relative;
+
+            #notification-icon {
+                width: 22px;
+                height: auto;
+                margin-top: 10px;
+
+                path {
+                    fill: black;
+                }
+            }
+
+            .badge {
+                height: 16px;
+                width: auto;
+                top:8px;
+                left:2px;
+                border-radius: 5px;
+                background-color: red;
+                font-weight: bold;
+                color:white;
+                position: absolute;
+            }
+        }
+    
+        
     }
 
     @include media-breakpoint-up(sm) {
@@ -112,8 +150,8 @@
         border-radius: 10px;
 
         &:hover {
-            background: rgb(132, 216, 246);
-            border: 1px solid rgb(132, 216, 246);
+            background: $bright-blue;
+            border: 1px solid $bright-blue;
             color: white;
         }
     }
@@ -140,20 +178,25 @@
             height: 40px;
 
             & .form-control:focus {
-                border-color: rgb(132, 216, 246);
+                border-color: $bright-blue;
             }
 
             .input-group-append a {
                 color: white;
                 font-size: 13px;
                 text-decoration: none;
-                background-color: #4077AA;
-                border: 1px solid rgb(132, 216, 246);
-                border-radius: 5px;
-                padding-top: 6px;
-                padding-right: 4px;
-                padding-left: 4px;
+                background-color: $primary;
+                border: 1px solid $primary;
+                border-radius: $border-radius;
+                padding-top: 8px;
+                padding-right: 8px;
+                padding-left: 8px;
                 margin-left: 12px;
+
+                &:hover {
+                    background-color: $bright-blue;
+                    border: 1px solid $bright-blue;
+                }
             }
         }
     }

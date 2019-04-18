@@ -1,0 +1,178 @@
+#loginForm {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-dark;
+        }
+    }
+
+    position: relative;
+    background: $form-bg;
+    border: 1px solid $primary;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: $br;
+
+    .tab-group {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 40px 0;
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        li a {
+            display: block;
+            text-decoration: none;
+            padding: 15px;
+            background: rgba($gray-light, 0.25);
+            color: #aaa;
+            font-size: 20px;
+            float: left;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+
+            &:hover {
+                background: $primary-dark;
+                color: $white;
+            }
+        }
+
+        .active a {
+            background: $primary;
+            color: $white;
+        }
+    }
+
+    .tab-content > div:last-child {
+        display: none;
+    }
+
+    h2 {
+        text-align: center;
+        color: $dark-blue;
+        font-weight: $normal;
+    }
+
+    label {
+        position: absolute;
+        transform: translateY(6px);
+        left: 13px;
+        color: $gray;
+        transition: all 0.25s ease;
+        -webkit-backface-visibility: hidden;
+        pointer-events: none;
+        font-size: 22px;
+
+        .req {
+            margin: 2px;
+            color: $gray-light;
+        }
+    }
+
+    label.active {
+        transform: translateY(50px);
+        left: 2px;
+        font-size: 14px;
+
+        .req {
+            opacity: 0;
+        }
+    }
+
+    label.highlight {
+        color: $primary;
+    }
+
+    input, textarea {
+        font-size: 22px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        -webkit-box-shadow: 0 0 0 100px white inset;
+        padding: 5px 10px;
+        background-image: none;
+        border: 1px solid $gray-light;
+        color: $gray-light;
+        border-radius: 0;
+        transition: border-color .25s ease, box-shadow .25s ease;
+
+        &:focus {
+            outline: 0;
+            border-color: $primary;
+        }
+    }
+
+    textarea {
+        border: 2px solid $gray-light;
+        resize: vertical;
+        font-size: 18px;
+    }
+
+    .field-wrap {
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .top-row {
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        > div {
+            float: left;
+            width: 48%;
+            margin-right: 4%;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .button {
+        border: 0;
+        outline: none;
+        border-radius: 0;
+        padding: 15px 0;
+        font-size: 1.5rem;
+        font-weight: $bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        background: $primary;
+        color: $white;
+        transition: all 0.5s ease;
+        -webkit-appearance: none;
+
+        &:hover, &:focus {
+            background: $primary-dark;
+        }
+    }
+
+    .button-block {
+        display: block;
+        width: 100%;
+    }
+
+    .forgot {
+        margin-top: -20px;
+        text-align: right;
+        color: $primary;
+
+        & a {
+            color: $primary;
+        }
+
+        a:hover {
+            color: $dark-blue;
+        }
+    }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <script src="site.min.js"></script>
+
+    <title>study</title>
+</head>
+
+<body>
+    <!--study-skill-start-->
+
+
+
+    <div class="container-fluid">
+       
+            @include('./partials/navbar.html')
+
+            @include('./partials/w-prompt.html')
+     
+            <!-- login-Part-sart -->
+            @include('./partials/login.html')
+        <div id="w-prompt-container">
+            <div id="first-question-modal" class="mfp-hide white-popup">
+                <div class="first-question-prompt">
+                    <p class="prompt-title">You are asking your first question!</li>
+                        <li>How to quickly get a good answer:</li>
+                        <ul class="tip-list">
+                            <li>Keep your question short and to the point</li>
+                            <li>Check for grammar or spelling errors</li>
+                            <li>Phrase it like a question</li>
+                        </ul>
+                </div>
+                <div class="AskQuestionSelector TyperseachEsselector" tabindex="-1" id="start-type-question">
+                    <div class="selector-input-interaction">
+                        <div class="CharacterCounter fade-out"></div>
+                        <textarea class="selector-input text" type="text" rows="1" data-group="js-editable" placeholder="Ask your question here"></textarea>
+                        <hr>
+                    </div>
+                </div>
+                <div class="prompt-footer">
+                    <span class="text-links pl=5px">
+                        <a class="prompt-cancel" href="#">Canel</a>
+                        <label class="prompt-label">
+                            <input type="checkbox" id="prompt-footer-input">Add Anonymously
+                        </label>
+                    </span>
+                    <a class="prompt-submit-button" href="#">Add Question</a>
+                </div>
+            </div>
+        </div>
+
+
+   
+
+        <!-- login-Part-sart -->
+        <div id="loginForm" class="mfp-hide">
+
+                <ul class="tab-group">
+                    <li class="tab">
+                        <a href="#signup">Sign Up</a>
+                    </li>
+                    <li class="tab active">
+                        <a href="#login">Log In</a>
+                    </li>
+                </ul>
+    
+                <div class="tab-content">
+                    <div id="login">
+                        <h2>Welcome Back!</h2>
+    
+                        <form action="login.php" method="post">
+                            <div class="field-wrap">
+                                <label class="">
+                                    Email Address
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" />
+                            </div>
+    
+    
+                            <div class="field-wrap">
+                                <label class="">
+                                    Password
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" />
+                            </div>
+    
+                            <p class="forgot">
+                                <a href="forgot.php">Forgot Password</a>
+                            </p>
+                            <button class="button button-block" />Log In</button>
+    
+                        </form>
+    
+                    </div>
+    
+    
+                    <div id="signup">
+                        <h2>Sign up for Free</h2>
+    
+                        <form action="register.php" method="post" autocomplete="off">
+    
+                            <div class="top-row">
+    
+                                <div class="field-wrap">
+                                    <label>
+                                        First Name
+                                        <span class="reg">*</span>
+                                    </label>
+                                    <input type="text" required autocomplete="off" />
+                                </div>
+    
+                                <div class="field-wrap">
+                                    <label>
+                                        Last Name
+                                        <span class="reg">*</span>
+                                    </label>
+                                    <input type="text" required autocomplete="off" />
+                                </div>
+                            </div>
+    
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address
+                                    <span class="reg">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" />
+                            </div>
+    
+                            <div class="field-wrap">
+                                <label>
+                                    Set A Password
+                                    <span class="req">*</span>
+                                </label>
+    
+                                <input type="password" required autocomplete="off" />
+                            </div>
+    
+    
+                            <button type="sumbit" class="button button-block" />Register</button>
+    
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!--login-part-over -->
+    
+
+    
+
+
+
+
+
+
+    <div class="container study-page">
+
+        <div class="row study-section">
+            <div class="study-catalogues col-sm-2">
+                <ul>
+
+                    <li class="link-item">
+                        <a class="study-link active" href="https://www.biblestudytools.com/bible-study/">Bibel Study</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href=" https://www.biblestudytools.com/library/">Library</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/bible-study/prayers/">praryers</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.christianity.com/trivia/">Bible Trivaia</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/blogs/">Blogs</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/dictionaries/">Dictionaeries</a>
+
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/encyclopedias/">Encyclopedias</a>
+                    </li>
+
+
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/inspirations/">Inspirations</a>
+                    </li>
+
+
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.biblestudytools.com/history/">History</a>
+                    </li>
+
+                    <li class="link-item">
+                        <a class="study-link" href="https://www.christianity.com/trivia/">Other Resources</a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="study-content col-sm-6">
+
+                <h2>How to study the bible?</h2>
+                <article>
+                    <strong>Study Skills</strong>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis dignissimos obcaecati nihil
+                        soluta in praesentium et delectus explicabo esse distinctio odio sint accusamus ex ercitationem ut
+                        possimus, labore enim quisquam non vitae iste. Dolorum distinctio amet impedit, eaque, p
+                </article>
+
+                <div class="improve-part">
+                    <h5>what is you want to improve through the bibel?</h5>
+                    1. your personality? 2. your patience? 3. your relationship with someone?
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. lore, labore quod eum dignissimos
+                    </li>
+                </div>
+
+                <h5>How to study the bible?</h5>
+                <article>
+                    <strong>Study Skills</strong>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores blanditiis dignissimos obcaecati nihil
+                        soluta in praesentium et delectus explicabo esse distinctio odio sint accusamus ex ercitationem ut
+                        possimus, labore enim quisquam non vitae iste. Dolorum distinctio amet impedit, eaque, p
+                </article>
+
+                <div class="improve-part">
+                    <h5>what is you want to improve through the bibel?</h5>
+                    1. your personality? 2. your patience? 3. your relationship with someone?
+                    <li>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. lore, labore quod eum dignissimos
+                    </li>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="media-icon row">
+        <a href="https://www.facebook.com/TruthLambs/">
+            <img src="img/facebook.png" alt="facebook" width="48" height="48">
+        </a>
+        <img src="img/twitter.png" alt="twitter" width="48" height="48">
+        <img src="img/youtube.png" alt="youtube" width="48" height="48">
+        <img src="img/instagram.png" alt="instagram" width="48" height="48">
+        <img src="img/google_plus.png" alt="google_plus" width="48" height="48">
+    </div>
+   
+       
+    @include('./partials/prayer.html')
+    @include('./partials/footer.html')
+
+</body>
+
+</html>

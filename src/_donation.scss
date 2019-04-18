@@ -4,9 +4,15 @@
 
 /* donation-left-part */
 .donation {
-    background-color: rgb(180, 201, 221);
-    padding: 20px 20px;
-    text-align: center;
+    margin-right: -180px;
+    padding: 20px 10px;
+    color: $light-grey;
+
+    .donation-left-content {
+        .donation-article {
+            margin-right: 50px;
+        }
+    }
 
     & .donation-img img {
         width: 300px;
@@ -18,42 +24,169 @@
 
 /* donation-right-part */
 
-.donation-content {
+.donation-right-content {
     width: 445px;
-    height: 748.5px;
-    background: whitesmoke;
+    
+    color: $font-color;
+    font-size: 11pt;
 
-    & .donate-title {
-        background-color: $footer-color;
-        color: white;
-        text-align: start;
-        padding: 5px 8px;
-        margin: 0;
-    }
-
-    .form-part {
+    .donation-content-body {
         width: 443px;
-        height: 706.5px;
-        border: 1px solod salmon;
+       
+        background-color: #ffffff;
+        border: 1px solid #acbcd5;
+        border-radius: 4px;
 
-        .money-amount {
-            display: flex;
-            justify-content: space-evenly;
+        .information-steps ul {
+            padding: 0 10px;
         }
 
-        .btn-amount {
-            min-width: 56px;
-            font-weight: 300;
-            text-align: center;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857;
-            border-radius: 4px;
+        & .donate-title {
             background-color: $footer-color;
-            border-color: $footer-color;
             color: #ffffff;
+            font-size:16px;
+            padding: 10px 10px;
+            
         }
+
+        /* Any whole tab content. This will be shown/hidden using javascript. */
+        .donation-step {
+            /* Styles for all content frames above next button */
+            .step-content {
+                width: 398px;
+                margin: 10px 20px;
+                padding: 10px 25px;
+                border: 1px solid #acbcd5;
+                border-radius: 4px;
+
+                .amount-choose {
+                    margin-bottom: 40px;
+                }
+
+                .donation-message {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+
+                    textarea.form-control {
+                        font-size: 11pt;
+                        color: #9b999c;
+                        padding-bottom: 35px;
+                        padding-left: 8px;
+                        padding-right: 8px;
+                    }
+                }
+            }
+
+            /* Style for each next button */
+            .pagination-btn {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+               
+            }
+
+            /* Specific styles only in the first step */
+            &.step-1 {
+                
+               
+                .money-amount {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-bottom: 25px;
+
+                    .btn-amount {
+                        min-width: 56px;
+                        background-color: $footer-color;
+                        color: #ffffff;
+                    }
+                }
+
+                .Additional{
+                    display: none;
+                }
+                .form-check {
+                    padding-bottom: 10px;
+
+                    .form-check-label {
+                        text-align: start;
+                    }
+                }
+
+                .donation-message-label {
+                    text-align: start;
+                    margin-top: 25px;
+                }
+            }
+
+            &.step-2 {
+                display: none;
+                background-color: #ffffff;
+                height: 828px;
+               .step-content {
+                    height: 700px;
+                }
+             }
+
+            &.step-3{
+                display: none;
+                .step-content div{
+                    padding: 6px 0px;
+                }
+                & .pay-buttons{
+                    width: 352px;
+                    height: 68px;
+                    .radio label input{
+                        padding-right:3px ;
+                    }
+                    
+
+                }
+                
+               #credit-card-info{
+                   display: none;
+               }
+               
+                
+               
+               }
+            }
+        }
+
+    .FAQ-box{
+        width: 445px;
+        background-color: #ffffff;
+        margin-top: 30px;
+        border: 1px solid #acbcd5;
+        .FAQ-heading{
+            background-color: $footer-color;
+            color: whitesmoke;
+            font-size: 16px;
+            padding: 10px 10px;
+        }
+        .FAQ-content{
+            width: 400px;
+            padding: 15px 15px;
+            .question-heading{
+                font-size: 15px;
+                font-weight: 400;
+                
+               
+            }
+
+        }
+     .FAQ-answer{
+         display: none;
+     }
+
+
+
+
+
+
     }
+
+
+
 
     .steps-tab {
         width: 100%;
@@ -79,6 +212,7 @@
                     width: 20px;
                     height: 20px;
                     font-size: 12px;
+                    text-align: center;
                     display: inline-block;
                     vertical-align: middle;
                     background: #fff;
@@ -110,6 +244,7 @@
                 & > .line {
                     background-color: $footer-color;
                 }
+
                 .number {
                     position: relative;
                     background-color: $footer-color;
@@ -130,4 +265,5 @@
             }
         }
     }
+
 }
